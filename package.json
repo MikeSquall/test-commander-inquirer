@@ -1,0 +1,14 @@
+{
+  "name": "commander",
+  "version": "1.0.0",
+  "description": "A Commander JS test app",
+  "main": "index.js",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "colors": "^1.3.3",
+    "commander": "^2.19.0",
+    "inquirer": "^6.2.2",
+    "pad": "^2.2.2"
+  }
+}
