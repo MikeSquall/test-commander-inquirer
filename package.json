@@ -1,6 +1,6 @@
 {
   "name": "@mikesquall/play-with-npm",
-  "version": "0.0.7",
+  "version": "0.0.8-test-branch.1552579842.0",
   "description": "A Commander JS test app",
   "main": "index.js",
   "license": "MIT",
