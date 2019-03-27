@@ -18,7 +18,7 @@ deploy:
     skip_cleanup: true
     script: bash scripts/publish.sh
     on:
-      repo: @mikesquall/play-with-commander
+      repo: '@mikesquall/play-with-commander'
       branch:  develop
 
 notifications:
