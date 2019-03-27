@@ -10,6 +10,9 @@ if [[ "$TRAVIS_BRANCH" =~ ^feature\/.*$ ]]; then
     echo "|    Deploying snapshot on npm registry    |"
     echo "--------------------------------------------"
     npm version prerelease --preid=$BRANCH_NAME
+    echo "++++++++++++++++++++++++++++++++++++++++++++"
+    npm version
+    echo "++++++++++++++++++++++++++++++++++++++++++++"
     npm publish --tag pull-request
 elif [[ "$TRAVIS_BRANCH" == "develop" ]] && [[ "$TRAVIS_PULL_REQUEST" == "false" ]]; then
     echo "--------------------------------------------"
