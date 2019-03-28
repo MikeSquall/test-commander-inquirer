@@ -1,0 +1,26 @@
+sudo: true
+language: node_js
+node_js:
+  - "10"
+
+branches:
+  only:
+    - /.*/
+
+install:
+  - yarn install --production=false
+
+script:
+  - 'if [ "$TRAVIS_BRANCH" != "develop" ]; then bash scripts/publish.sh; fi'
+
+deploy:
+  - provider: script
+    skip_cleanup: true
+    script: bash scripts/publish.sh
+    on:
+      repo: '@mikesquall/play-with-commander'
+      branch:  develop
+
+notifications:
+  email:
+    on_failure: always
