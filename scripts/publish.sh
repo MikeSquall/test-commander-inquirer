@@ -13,13 +13,13 @@ if [[ "$TRAVIS_BRANCH" =~ ^feature\/.*$ ]]; then
     echo "++++++++++++++++++++++++++++++++++++++++++++"
     npm version
     echo "++++++++++++++++++++++++++++++++++++++++++++"
-    npm publish --tag pull-request
+    npm publish --tag pull-request --access public
 elif [[ "$TRAVIS_BRANCH" == "develop" ]] && [[ "$TRAVIS_PULL_REQUEST" == "false" ]]; then
     echo "--------------------------------------------"
     echo "|     Deploying latest on npm registry     |"
     echo "--------------------------------------------"
     npm version prepatch
-    npm publish --tag next
+    npm publish --tag next --access public
 else
     echo "*************************************************"
     echo "*   Not a pull request, npm publish skipped !   *"
